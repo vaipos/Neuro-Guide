@@ -9,4 +9,6 @@ SWE-match '24 diagnosis and prognosis for mental health illnesses
 `npx create-next-app@13.4.19`
 * Proceed? yes
 * Default Responses to questions
+* npm run dev
+  
 
