@@ -5,11 +5,13 @@ import NavBar from '../LakshaComps/Comp1';
 const Background = () => {
   return (
     <>
-    <div className="bg-[url('./bg.png')] bg-cover bg-center h-screen  bg-no-repeat">
-      <NavBar/>
-      <Title/>
-      <StartBtn/>
+    <div className="relative w-screen h-screen">
+      <div className=" ">
+        <NavBar/>
+        <Title/>
+        <StartBtn/>
       </div>
+    </div>
     </>
   );
 };

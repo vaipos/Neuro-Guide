@@ -7,7 +7,18 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-   
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '50%': '50%',
+      '100': '200%',
+    },
+    extend: {
+      colors: {
+        custom: '#F3ECDF',
+      },
+    },
   },
   plugins: [],
 }
