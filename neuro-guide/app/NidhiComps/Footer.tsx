@@ -11,8 +11,8 @@ const Footer = () => {
         <Link href='/'  className = 'font-normal'>Contact</Link>
         </div>
         <div className = 'font-bold flex flex-col'>Products
-        <Link href='/'  className = 'font-normal'>Quiz</Link>
-        <Link href='/'  className = 'font-normal'>Chatbot</Link>
+        <Link href='/Quiz'  className = 'font-normal'>Quiz</Link>
+        <Link href='//Login'  className = 'font-normal'>Chatbot</Link>
         </div>
     </div>
   )
