@@ -1,29 +1,38 @@
-import React from 'react'
+import React from 'react';
 
 const MissionStmt = () => {
   return (
-    <>
-    <div className="max-w-sm w-full lg:max-w-full lg:flex">
-  <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
-  </div>
-  <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-    <div className="mb-8">
-      <p className="text-sm text-gray-600 flex items-center">
-        <svg className="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-      </p>
-      <div className="text-gray-900 font-bold text-xl mb-2 text-center">Mission Statement</div>
-      <p className="text-gray-700 text-base">We offer a great blah with another blah and I would really love if blah and blah blah.We offer a great blah with another blah and I would really love if blah and blah blah. We offer a great blah with another blah and I would really love if blah and blah blah. </p>
-    </div>
-    <div className="flex items-center">
+    <div className="relative my-36">
     
-    </div>
-  </div>
-</div>
-    
-    </>
-  )
-}
+      <div className="flex justify-center items-center h-screen">
+      <div className="w-4/5 h-2.5/5 lg:max-w-full lg:flex relative z-10 flex justify-center items-center">
+          {/*original spot for image div*/}
+          <div className="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) transition: 0.3s width: 40% border-r border-b border-l border-gray-400 lg:border-l-0 
+          lg:border-t lg:border-gray-400 bg-white rounded-3xl p-8 flex flex-col justify-between leading-normal drop-shadow-lg">
+            <div className="mb-8">
+              <div className="text-gray-900 font-bold text-3xl mb-2 text-align: left py-10 px-5">MISSION STATEMENT</div>
+              <p className="text-gray-900 text-xl px-5 py-3">Our mission is to destigmatize mental health by offering free and accessible AI-driven diagnoses, 
+              breaking down barriers to mental healthcare, and empowering individuals to seek support through technology. We believe in promoting mental well-being 
+              globally and advocating for equal access to comprehensive mental healthcare for everyone.</p>
+            </div>
 
-export default MissionStmt
+            <div className="center">
+              <button className="drop-shadow-lg bg-buttonColor hover:bg-white transition-colors text-white hover:text-black font-bold py-2 px-9 rounded-full 
+              my-7 mx-5 text-xl">About Us</button>
+            </div>
+
+          </div>
+      </div>
+      </div>
+
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 mb-8 z-20">
+        <div className="bg-black text-white py-6 px-24 rounded-xl drop-shadow-md">
+          <h2 className="text-xl font-bold">What We Offer</h2>
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default MissionStmt;

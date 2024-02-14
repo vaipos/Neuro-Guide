@@ -17,6 +17,10 @@ const config: Config = {
     extend: {
       colors: {
         custom: '#F3ECDF',
+        buttonColor: '#eb5e28',
+        quizCardColor: '#72BCC2',
+        startHere: '#DAD0C3',
+        neutral: '#DACCB1',
         lightYellow: '#FFE4AD',
         lightRed: '#F5977A',
         lightBeige: '#FDF7EC',
