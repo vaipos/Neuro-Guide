@@ -2,7 +2,7 @@ import React from 'react';
 
 const MissionStmt = () => {
   return (
-    <div className="relative my-36">
+    <div className="relative my-4">
     
       <div className="flex justify-center items-center h-screen">
       <div className="w-4/5 h-2.5/5 lg:max-w-full lg:flex relative z-10 flex justify-center items-center">
