@@ -10,7 +10,7 @@ const page = () => {
   return (
     <>
     <NavBar/>
-    <div className="bg-[url('./LoginBG.png')] bg-cover bg-no-repeat ">
+    <div className="bg-[url('./betterlogbg.png')] bg-cover bg-no-repeat ">
       <LoginText/>
       <div className="absolute bottom-72 right-36 ">
         <SignUpForm/>

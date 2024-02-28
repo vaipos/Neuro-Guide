@@ -12,7 +12,6 @@ const page = () => {
     <div className="bg-[url('./quizpgbg.png')] bg-cover bg-no-repeat" >
         <QuizText/>
     </div>
-    
     <Footer/>
     </>
   )
