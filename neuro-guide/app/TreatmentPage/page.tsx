@@ -6,8 +6,8 @@ import Footer from '../NidhiComps/Footer'
 const page = () => {
   return (
     <>
-    <Comp1/>
-    <div className="relative bg-[url('./AboutUsBg.png')] bg-cover bg-no-repeat">
+    <div className="relative bg-[url('./AboutUsBg.png')] bg-contain bg-no-repeat">
+      <Comp1/>
       <Treatments/>
     </div>
     <Footer/>

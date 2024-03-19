@@ -98,26 +98,6 @@ const Questions = () => {
             </div>
         </div>
     </div>
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle9/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle10/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
     </>
   )
 }
