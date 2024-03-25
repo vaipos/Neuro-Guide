@@ -10,8 +10,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model UserResponse {
   userID Int @id @default(autoincrement())
-  username String @unique
-  password String
+  username String 
+  Question1 Int
+  Question2 Int
+  Question3 Int
+  Question4 Int
+  Question5 Int
+  Question6 Int
+  Question7 Int
+  Question8 Int
+  Diagnosis Int
 }

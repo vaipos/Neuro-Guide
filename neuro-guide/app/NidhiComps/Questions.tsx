@@ -10,8 +10,6 @@ import MiniCircle9 from './MiniCircle9';
 import MiniCircle6 from './MiniCircle6';
 import MiniCircle10 from './MiniCircle10';
 
-
-
 const Questions = () => {
   return (
     <>
