@@ -1,103 +1,206 @@
+'use client'
 import React from 'react';
-import MiniCircles from './MiniCircles1';
-import MiniCircle2 from './MiniCircle2';
-import MiniCircle3 from './MiniCircle3';
-import MiniCircle4 from './MiniCircle4';
-import MiniCircle5 from './MiniCircle5';
-import MiniCircle7 from './MiniCircle7';
-import MiniCircle8 from './MiniCircle8';
-import MiniCircle9 from './MiniCircle9';
-import MiniCircle6 from './MiniCircle6';
-import MiniCircle10 from './MiniCircle10';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 const Questions = () => {
+  const { register, handleSubmit } = useForm();
+  const router = useRouter();
+  const onSubmit = async (data: any) => {
+    try {
+      const response = await axios.post('/api/Quiz', data);
+      console.log('Ratings submitted successfully:', response.data);
+      router.push('/TreatmentPage');
+    } catch (error) {
+      console.error('Error submitting ratings:', error);
+    }
+  };
+
   return (
-    <>
-    <div className="my-36">
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="my-36">
         <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircles/>
-                <div className="font-light text-xl">Disagree</div>
+          <div className="text-left text-3xl">Question 1</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question1')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
             </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
         </div>
-    </div>
+      </div>
+      <div className="my-36">
+        <div className="mx-56">
+          <div className="text-left text-3xl">Question 2</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question2')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
+        </div>
+      </div>
+      <div className="my-36">
+        <div className="mx-56">
+          <div className="text-left text-3xl">Question 3</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question3')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
+        </div>
+      </div>
+      <div className="my-36">
+        <div className="mx-56">
+          <div className="text-left text-3xl">Question 4</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question4')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
+        </div>
+      </div>
+      <div className="my-36">
+        <div className="mx-56">
+          <div className="text-left text-3xl">Question 5</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question5')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
+        </div>
+      </div>
+      <div className="my-36">
+        <div className="mx-56">
+          <div className="text-left text-3xl">Question 6</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question6')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
+        </div>
+      </div>
+      <div className="my-36">
+        <div className="mx-56">
+          <div className="text-left text-3xl">Question 7</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question7')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
+        </div>
+      </div>
+      <div className="my-36">
+        <div className="mx-56">
+          <div className="text-left text-3xl">Question 8</div>
+          <div className="flex justify-center my-8">
+            <div className="font-light text-xl">Agree</div>
+            <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
+                <label key={rating} className="relative left-6 bottom-1 w-28 h-28">
+                  <input
+                    type="radio"
+  
+                    value={rating}
+                    {...register('question8')}
+                    className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </label>
+              ))}
+            </div>
+            <div className="font-light text-xl">Disagree</div>
+          </div>
+        </div>
+      </div>
+      
+    
 
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle2/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle3/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle4/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle5/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
+      <button type="submit" className='"justify-center text-white bg-black  hover:bg-blue-700 transition-colors hover:text-white font-medium py-4 px-10 rounded-2xl text-2xl mb-24 -mt-10"'>Submit </button>
+    </form>
+  );
+};
 
-    <div className="my-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle6/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
-
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle7/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
-    <div className="mb-36">
-        <div className="mx-56">
-            <div className="text-left text-3xl">1. Question here</div>
-            <div className="flex justify-center my-8">
-                <div className="font-light text-xl">Agree</div>
-                    <MiniCircle8/>
-                <div className="font-light text-xl">Disagree</div>
-            </div>
-        </div>
-    </div>
-    </>
-  )
-}
-
-export default Questions
+export default Questions;
