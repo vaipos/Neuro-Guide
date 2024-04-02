@@ -1,0 +1,14 @@
+-- CreateTable
+CREATE TABLE `Treatments` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `diagnosis` VARCHAR(191) NOT NULL,
+    `fact1` VARCHAR(191) NOT NULL,
+    `fact2` VARCHAR(191) NOT NULL,
+    `fact3` VARCHAR(191) NOT NULL,
+    `fact4` VARCHAR(191) NOT NULL,
+    `s1` VARCHAR(191) NOT NULL,
+    `s2` VARCHAR(191) NOT NULL,
+    `s3` VARCHAR(191) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
