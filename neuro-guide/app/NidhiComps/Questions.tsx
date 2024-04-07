@@ -7,15 +7,21 @@ import { useSession } from "next-auth/react";
 
 
 const Questions = () => {
+  const { data: session } = useSession();
+
   const { register, handleSubmit } = useForm();
   const router = useRouter();
   const onSubmit = async (data: any) => {
     try {
-      const response = await axios.post('/api/Quiz', data);
+      const requestData = {
+        ...data,
+        email: session?.user?.email || "", // Add the current user's email
+      };
+      const response = await axios.post('/api/Quiz', requestData);
       console.log('Ratings submitted successfully:', response.data);
       router.push('/TreatmentPage');
     } catch (error) {
-      console.error('Error submitting ratings:', error);
+      console.error('Error submitting request:', error);
     }
   };
 

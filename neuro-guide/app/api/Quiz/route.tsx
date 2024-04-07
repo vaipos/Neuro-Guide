@@ -1,55 +1,35 @@
-'use client'
+// Import necessary modules
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/prisma/client";
 import schema from "./schema";
 
 export async function POST(request: NextRequest) {
-    const reqBody = await request.json(); // Renamed req1 to reqBody for clarity
+  
+    try {
+        // Parse the incoming JSON request body
+        const reqBody = await request.json();
 
-  const parsedBody = {
-    ...reqBody,
-    question1: Number(reqBody.question1),
-    question2: Number(reqBody.question2),
-    question3: Number(reqBody.question3),
-    question4: Number(reqBody.question4),
-    question5: Number(reqBody.question5),
-    question6: Number(reqBody.question6),
-    question7: Number(reqBody.question7),
-    question8: Number(reqBody.question8),
-  };
+        // Create a new user response in the database using Prisma
+        const newUserResponse = await prisma.userResponse.create({
+            data: {
+                username: reqBody.email,
+                Question1: Number(reqBody.question1),
+                Question2: Number(reqBody.question2),
+                Question3: Number(reqBody.question3),
+                Question4: Number(reqBody.question4),
+                Question5: Number(reqBody.question5),
+                Question6: Number(reqBody.question6),
+                Question7: Number(reqBody.question7),
+                Question8: Number(reqBody.question8),
+                Diagnosis: 101,
+            },
+        });
 
-  const valid = schema.safeParse(parsedBody);
-
-  if (!valid.success) {
-    console.log("AYO NO");
-    return NextResponse.json({ error: "" });
-  }
-
-  const {
-    question1,
-    question2,
-    question3,
-    question4,
-    question5,
-    question6,
-    question7,
-    question8,
-  } = parsedBody;
-
-  const newResponse = await prisma.userResponse.create({
-    data: {
-      username: "oyo",
-      Question1: question1,
-      Question2: question2,
-      Question3: question3,
-      Question4: question4,
-      Question5: question5,
-      Question6: question6,
-      Question7: question7,
-      Question8: question8,
-      Diagnosis: 101,
-    },
-  });
-
-  return NextResponse.json(newResponse, { status: 201 });
+        // Return a successful response with the newly created user response data
+        return NextResponse.json(newUserResponse, { status: 201 });
+    } catch (error) {
+        // If an error occurs during the process, handle it and return an appropriate response
+        console.error("Error creating user response:", error);
+        return NextResponse.error();
+    }
 }
