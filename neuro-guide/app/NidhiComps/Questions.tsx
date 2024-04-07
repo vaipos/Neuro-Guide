@@ -205,8 +205,9 @@ const Questions = () => {
       </div>
       
     
+    <div className="text-center"> <button type="submit" className=' object-center text-white bg-black  hover:bg-blue-700 transition-colors hover:text-white font-medium py-4 px-10 rounded-2xl text-2xl mb-24 -mt-10"'>Submit </button>
+</div>
 
-      <button type="submit" className='"justify-center text-white bg-black  hover:bg-blue-700 transition-colors hover:text-white font-medium py-4 px-10 rounded-2xl text-2xl mb-24 -mt-10"'>Submit </button>
     </form>
   );
 };
