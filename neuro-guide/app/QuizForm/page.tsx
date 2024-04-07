@@ -17,7 +17,7 @@ const page = () => {
         </div>
         <Questions/>
         <div className = 'py-2'></div>
-
+        <Submit/>
     </div>
    <Footer/>
 

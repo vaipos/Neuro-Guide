@@ -1,9 +1,10 @@
+'use client'
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/prisma/client";
 import schema from "./schema";
 
 export async function POST(request: NextRequest) {
-  const reqBody = await request.json();
+    const reqBody = await request.json(); // Renamed req1 to reqBody for clarity
 
   const parsedBody = {
     ...reqBody,
