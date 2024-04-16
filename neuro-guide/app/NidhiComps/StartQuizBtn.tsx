@@ -12,10 +12,10 @@ const StartQuizBtn = () => {
   return (
     <>
       <div className="px-56">
-        {status === 'unauthenticated' && <Link href= "/api/auth/signin" className=" drop-shadow-md bg-white hover:bg-blue-700 transition-colors text-black hover:text-white font-bold py-3 px-44 rounded-2xl mx-80 text-xl">
+        {status === 'unauthenticated' && <Link href= "/api/auth/signin" className=" drop-shadow-md bg-white hover:bg-blue-700 transition-colors text-black hover:text-white font-bold py-3 px-40 rounded-2xl mx-64 text-xl">
         Sign in to Start Quiz
         </Link>  } 
-        {status === 'authenticated' && <Link href= "/QuizForm" className=" drop-shadow-md bg-white hover:bg-blue-700 transition-colors text-black hover:text-white font-bold py-3 px-44 rounded-2xl mx-80 text-xl">
+        {status === 'authenticated' && <Link href= "/QuizForm" className=" drop-shadow-md bg-white hover:bg-blue-700 transition-colors text-black hover:text-white font-bold py-3 px-44 rounded-2xl mx-72 text-xl">
         Start Quiz
         </Link>  } 
       </div>

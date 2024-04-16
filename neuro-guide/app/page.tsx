@@ -8,16 +8,17 @@ import ScrollIcon from './LakshaComps/ScrollIcon'
 export default function Home() {
   return (
     <>
-    <div className="bg-custom">
-    <div className="bg-[url('./bg.png')] bg-no-repeat ">
+
+    <div className="bg-[url('./bg.png')] bg-no-repeat bg-custom w-screen">
     <Background/>
     <MissionStmt/>
     <StepsCards/>
-    <Footer/>
+
+
+
 
     </div>
-       
-    </div>
+    <Footer/>
    
 
     </>

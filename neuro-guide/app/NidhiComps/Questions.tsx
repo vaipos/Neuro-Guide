@@ -222,19 +222,8 @@ const Questions = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center">
-          {" "}
-          <button
-            type="submit"
-            className=' object-center text-white bg-black  hover:bg-blue-700 transition-colors hover:text-white font-medium py-4 px-10 rounded-2xl text-2xl mb-24 -mt-10"'
-          >
-            Submit{" "}
-          </button>
-        </div>
-      </form>
-      {error && (
-        <div className="mr-48 ml-48">
+        {error && (
+        <div className="mx-96">
           {" "}
           <div role="alert" className="alert alert-error">
             <svg
@@ -250,10 +239,21 @@ const Questions = () => {
                 d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span>Error! Task failed successfully.</span>
+            <span>Please fill all necessary fields</span>
           </div>{" "}
         </div>
       )}
+        <div className="text-center my-10">
+          {" "}
+          <button
+            type="submit"
+            className=' object-center text-white bg-black  hover:bg-blue-700 transition-colors hover:text-white font-medium py-4 px-10 rounded-2xl text-2xl mb-24 -mt-10"'
+          >
+            Submit{" "}
+          </button>
+        </div>
+      </form>
+      
     </>
   );
 };

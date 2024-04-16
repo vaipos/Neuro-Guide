@@ -6,7 +6,7 @@ import NavBar from '../LakshaComps/Comp1';
 const Background = () => {
   return (
     <>
-    <div className="relative w-screen h-screen">
+    <div className=" h-screen">
       <div className=" ">
         <NavBar/>
         <Title/>
