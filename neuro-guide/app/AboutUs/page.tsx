@@ -11,6 +11,7 @@ export default function Home() {
         <Header/>
     </div>
     <Bio/>
+    <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-black"></hr>
     <Footer/>
     </>
     

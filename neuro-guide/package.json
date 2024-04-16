@@ -31,7 +31,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "daisyui": "^4.10.1",
+    "daisyui": "^4.10.2",
     "tailwindcss-animated": "^1.0.1"
   }
 }
