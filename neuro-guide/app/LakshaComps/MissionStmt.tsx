@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const MissionStmt = () => {
@@ -17,8 +18,8 @@ const MissionStmt = () => {
             </div>
 
             <div className="center">
-              <button className="drop-shadow-lg bg-buttonColor hover:bg-white transition-colors text-white hover:text-black font-bold py-2 px-9 rounded-full 
-              my-7 mx-5 text-xl">About Us</button>
+              <Link href = "/AboutUs" className="drop-shadow-lg bg-buttonColor hover:bg-white transition-colors text-white hover:text-black font-bold py-2 px-9 rounded-full 
+              my-7 mx-5 text-xl">About Us</Link>
             </div>
 
           </div>

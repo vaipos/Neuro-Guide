@@ -13,10 +13,6 @@ export default function Home() {
     <Background/>
     <MissionStmt/>
     <StepsCards/>
-
-
-
-
     </div>
     <Footer/>
    

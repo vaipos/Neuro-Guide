@@ -10,7 +10,10 @@ const Background = () => {
       <div className=" ">
         <NavBar/>
         <Title/>
-    
+        <div className="my-80">
+        <StartBtn/>
+        </div>
+        
       </div>
     </div>
     </>

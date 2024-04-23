@@ -49,7 +49,7 @@ const StepsCards = () => {
                 Gain clarity and validation about your mental health by obtaining a diagnosis through a quick mental health quiz. Take control of your well-being and access tailored resources to support your journey towards a happier, healthier life.
               </p>
               <div className="flex justify-end">
-                <a href="" className="btn btn-primary shadow-xl bg-black hover:bg-white rounded-full py-3 px-6 text-center text-white hover:text-black">
+                <a href= "./QuizForm" className="btn btn-primary shadow-xl bg-black hover:bg-white rounded-full py-3 px-6 text-center text-white hover:text-black">
                   Start Here
                 </a>
               </div>

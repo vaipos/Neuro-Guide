@@ -8,28 +8,28 @@ const Bio = () => {
         <div className="rounded-full">
             <img src='vais1.png'className='max-w-xs'></img>
         </div>
-            <div className='font-bold text-xl text-center my-8 mx-12'> Vaishnavi PXXXXXX </div>
-            <div className='text-sm font-normal text-left mx-36'>Project Manager</div>
+            <div className='font-bold text-xl text-center my-8 mx-12'> Vaishnavi Pasumarthi </div>
+            <div className='text-sm font-normal text-left mx-28'>Project Manager</div>
             <li className='text-sm font-light list-none'>Sophomore CS Major at UTD</li>
-            <li className='text-sm font-light list-none '>Passionate about creating helpful services</li>
+            <li className='text-sm font-light list-none '>Interested in AI</li>
         </div>
 
         <div className="flex flex-col items-center my-32">
         <div className="rounded-full "></div>
             <img src='nidhi1.png'className='max-w-xs' ></img>
             <div className='font-bold text-xl text-center my-8 mx-12'> Nidhi Majoju </div>
-            <div className='text-sm font-normal text-left mx-36'>Frontend/ML Engineer</div>
+            <div className='text-sm font-normal text-left mx-28'>Frontend/ML Engineer</div>
             <li className='text-sm font-light list-none'>Freshman CS Major at UTD</li>
-            <li className='text-sm font-light list-none '>Passionate about using AI for social good</li>
+            <li className='text-sm font-light list-none '>Interested in AI and Data Science</li>
         </div>
 
         <div className="flex flex-col items-center my-32">
         <div className="rounded-full "></div>
              <img src='lak1.png' className='max-w-xs'></img>
             <div className='font-bold text-xl text-center my-8 mx-12'> Laksha Arora </div>
-            <div className='text-sm font-normal text-left mx-36'>Frontend/ML Engineer</div>
+            <div className='text-sm font-normal text-left mx-28'>Frontend/ML Engineer</div>
             <li className='text-sm font-light list-none'>Sophomore CS Major at UTD</li>
-            <li className='text-sm font-light list-none '>Passionate about creating helpful services</li>
+            <li className='text-sm font-light list-none '>Interested in AI and Cybersecurity</li>
         </div>
 
     </div>
@@ -39,18 +39,18 @@ const Bio = () => {
             <div className="rounded-full "></div>
             <img src='thuyan1.png' className='max-w-xs'></img>
             <div className='font-bold text-xl text-center my-8 mx-12'> Thuyan Dang </div>
-            <div className='text-sm font-normal text-left mx-36'>Data Scientist/Backend</div>
+            <div className='text-sm font-normal text-left mx-28'>Data Scientist/Backend</div>
             <li className='text-sm font-light list-none'>Sophomore CS Major at UTD</li>
-            <li className='text-sm font-light list-none '>Passionate about creating helpful services</li>
+            <li className='text-sm font-light list-none '>Intrested in Web Dev and AI</li>
         </div>
 
         <div className="flex flex-col items-center my-32">
         <div className="rounded-full"></div>
         <img src='naomi1.png' className='max-w-xs'></img>
-            <div className='font-bold text-xl text-center my-8 mx-12'> Naomi XXXXX </div>
-            <div className='text-sm font-normal text-left mx-36'>Data Scientist/Backend</div>
+            <div className='font-bold text-xl text-center my-8 mx-12'> Naomi Ntuli </div>
+            <div className='text-sm font-normal text-left mx-28'>Data Scientist/Backend</div>
             <li className='text-sm font-light list-none'>Freshman CS Major at UTD</li>
-            <li className='text-sm font-light list-none '>Passionate about creating helpful services</li>
+            <li className='text-sm font-light list-none '>Interested AI and Fullstack Web Dev</li>
         </div>
 
     </div>

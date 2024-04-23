@@ -39,13 +39,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question1")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
@@ -63,13 +63,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question2")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
@@ -87,13 +87,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question3")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
@@ -111,13 +111,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question4")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
@@ -135,13 +135,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question5")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
@@ -159,13 +159,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question6")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
@@ -183,13 +183,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question7")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
@@ -207,13 +207,13 @@ const Questions = () => {
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
                     key={rating}
-                    className="relative left-6 bottom-1 w-28 h-28"
+                    className="relative left-12 bottom-2 w-28 h-28"
                   >
                     <input
                       type="radio"
                       value={rating}
                       {...register("question8")}
-                      className="text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
+                      className="text-blue-600 scale-150 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2 focus:ring-offset-gray-100 dark:bg-gray-700 dark:border-gray-600"
                     />
                   </label>
                 ))}
