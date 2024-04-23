@@ -21,7 +21,15 @@ const config: Config = {
         buttonColor: '#eb5e28',
         quizCardColor: '#72BCC2',
         startHere: '#DAD0C3',
-        neutral: '#DACCB1'
+        neutral: '#DACCB1',
+        midorange: '#e2b1a8',
+        dustypurp: '#afb6cd',
+        dustypink: '#ffbabc',
+        teal: '#4b93ab',
+        dullteal: '#aac4cb',
+        greyish: '#90908f'
+
+
 
       },
     },
