@@ -4,6 +4,10 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import ProgressBar from "./ProgressBar";
+import Footer from "./Footer";
+import Submit from "./Submit";
+import NavBar from "../LakshaComps/Comp1";
 
 const Questions = () => {
   const { data: session } = useSession();
@@ -29,10 +33,23 @@ const Questions = () => {
 
   return (
     <>
+      <div className="bg-white">
+        <div className="bg-[url('./bg.png')] bg-cover bg-no-repeat ">
+            <NavBar/>
+            <div className="py-20 text-5xl font-medium text-center">Mental Health Diagnosis Quiz</div>
+            <ProgressBar percentage={45} />
+            <div className='py-12'></div>
+        </div>
+        <Questions/>
+        <div className = 'py-2'></div>
+        <Submit/>
+    </div>
+   <Footer/>
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 1</div>
+            <div className="text-left text-2xl">Do you feel unsafe in the environment you reside in?</div>
             <div className="flex justify-center my-8">
               <div className="font-light text-xl">Agree</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
@@ -56,7 +73,7 @@ const Questions = () => {
         </div>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 2</div>
+            <div className="text-left text-2xl">Do you have access to your necessities (food, water, etc)?</div>
             <div className="flex justify-center my-8">
               <div className="font-light text-xl">Agree</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
@@ -80,9 +97,9 @@ const Questions = () => {
         </div>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 3</div>
+            <div className="text-left text-2xl">How often do you feel heard in conversations</div>
             <div className="flex justify-center my-8">
-              <div className="font-light text-xl">Agree</div>
+              <div className="font-light text-xl">Often</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
@@ -98,15 +115,15 @@ const Questions = () => {
                   </label>
                 ))}
               </div>
-              <div className="font-light text-xl">Disagree</div>
+              <div className="font-light text-xl">Rare</div>
             </div>
           </div>
         </div>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 4</div>
+            <div className="text-left text-2xl">How active is your current lifestyle?</div>
             <div className="flex justify-center my-8">
-              <div className="font-light text-xl">Agree</div>
+              <div className="font-light text-xl">High</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
@@ -122,15 +139,15 @@ const Questions = () => {
                   </label>
                 ))}
               </div>
-              <div className="font-light text-xl">Disagree</div>
+              <div className="font-light text-xl">Low </div>
             </div>
           </div>
         </div>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 5</div>
+            <div className="text-left text-2xl">How often do you get 7 or more hours of sleep?</div>
             <div className="flex justify-center my-8">
-              <div className="font-light text-xl">Agree</div>
+              <div className="font-light text-xl">Often</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
@@ -146,15 +163,15 @@ const Questions = () => {
                   </label>
                 ))}
               </div>
-              <div className="font-light text-xl">Disagree</div>
+              <div className="font-light text-xl">Rare</div>
             </div>
           </div>
         </div>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 6</div>
+            <div className="text-left text-2xl">How often do you feel at stress of your state?</div>
             <div className="flex justify-center my-8">
-              <div className="font-light text-xl">Agree</div>
+              <div className="font-light text-xl">Often</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
@@ -170,15 +187,15 @@ const Questions = () => {
                   </label>
                 ))}
               </div>
-              <div className="font-light text-xl">Disagree</div>
+              <div className="font-light text-xl">Rare</div>
             </div>
           </div>
         </div>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 7</div>
+            <div className="text-left text-2xl">To what level do you find joy around other people?</div>
             <div className="flex justify-center my-8">
-              <div className="font-light text-xl">Agree</div>
+              <div className="font-light text-xl">High</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((rating) => (
                   <label
@@ -194,13 +211,13 @@ const Questions = () => {
                   </label>
                 ))}
               </div>
-              <div className="font-light text-xl">Disagree</div>
+              <div className="font-light text-xl">Low</div>
             </div>
           </div>
         </div>
         <div className="my-36">
           <div className="mx-56">
-            <div className="text-left text-3xl">Question 8</div>
+            <div className="text-left text-2xl">Do you feel at content with yourself?</div>
             <div className="flex justify-center my-8">
               <div className="font-light text-xl">Agree</div>
               <div className="rounded-full bg-slate-300 h-2 w-full my-2 mx-3 flex justify-between">

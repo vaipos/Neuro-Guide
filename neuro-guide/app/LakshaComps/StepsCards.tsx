@@ -16,7 +16,7 @@ const StepsCards = () => {
 
   return (
     <>
-      <div className="mr-10 ml-10 py-24 -my-10 scroll-smooth">
+      <div className="mr-10 py-24 -my-10">
         <motion.div
           ref={ref1}
           className="card w-2/5 h-96 bg-teal rounded-2xl  shadow-dullteal px-10 py-5 shadow-2xl relative"

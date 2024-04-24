@@ -1,9 +1,12 @@
+
 "use client";
 import axios from "axios";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { string } from "zod";
-import ProgressBar from "./ProgressBar";
+import Comp1 from "../../LakshaComps/Comp1";
+import Footer from "../../NidhiComps/Footer";
 
 
 interface Treatments {
@@ -42,8 +45,9 @@ const Treatments = () => {
   }, []);
   const fetchDiagnosis = async () => {
     try {
-      const request = "Schizophrenia";
-
+      const url = window.location.href;
+      const request = decodeURIComponent(url.split("/").pop() || ""); 
+            console.log(request)
       const response = await axios.get("/api/treatment", {
         params: { diagnosis: request },
       });
@@ -57,7 +61,8 @@ const Treatments = () => {
 
   return (
     <>
-
+    <div className="relative bg-[url('./AboutUsBg.png')] bg-contain bg-no-repeat">
+      <Comp1/>
       {treatments.map((treatment, index) => (
         <div key={index}>
           <div className="text-4xl mx-24 mt-28 mb-4">Diagnostic Results</div>
@@ -130,7 +135,7 @@ const Treatments = () => {
               <h5 className="mx-8 mt-14 card-title text-4xl font-bold relative bottom-8">
                 Quick Facts
               </h5>
-              <div className="mx-8 collapse collapse-plus py-5 bg-slate-200">
+              <div className="mx-8 collapse collapse-plus py-5 bg-slate-100">
                 <input type="radio" name="my-accordion-3" defaultChecked />
                 <div className="collapse-title text-xl font-medium">
                   Condition Fact #1
@@ -139,7 +144,7 @@ const Treatments = () => {
                   <p>{treatment.fact1}</p>
                 </div>
               </div>
-              <div className="mx-8 collapse collapse-plus py-5  bg-slate-200">
+              <div className="mx-8 collapse collapse-plus py-5  bg-slate-100">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
                   Condition Fact #2
@@ -148,7 +153,7 @@ const Treatments = () => {
                   <p>{treatment.fact2}</p>
                 </div>
               </div>
-              <div className="mx-8 collapse collapse-plus py-5  bg-slate-200">
+              <div className="mx-8 collapse collapse-plus py-5  bg-slate-100">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
                   Condition Fact #3
@@ -157,7 +162,7 @@ const Treatments = () => {
                   <p>{treatment.fact3}</p>
                 </div>
               </div>
-              <div className="mx-8 collapse collapse-plus py-5  bg-slate-200">
+              <div className="mx-8 collapse collapse-plus py-5  bg-slate-100">
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
                   Condition Fact #4
@@ -328,9 +333,50 @@ const Treatments = () => {
             </ul>
           </div>
           <div className="py-16"></div>
+          <div className="flex justify-between mx-36">
+          <Link href="/QuizForm">
+          <button className="m-8 w-48 mx-36 btn btn-circle btn-outline">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Take Quiz Again
+          </button>
+        </Link>
+        <Link href="/">
+  <button className="m-8 w-40 mx-36 btn btn-circle btn-outline">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M3 10.5V19a1 1 0 0 0 1 1h5v-6h4v6h5a1 1 0 0 0 1-1v-8.5l-8-7-8 7z"
+      />
+    </svg>
+   Home
+  </button>
+</Link>
+        </div>
         </div>
       ))}
-
+   </div>
+    <Footer/>
       {/* Render other content */}
       {/* ... */}
     </>

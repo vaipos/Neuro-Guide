@@ -14,13 +14,13 @@ const NavBar = () => {
         </Link>
         <div className="flex ">
           <Link href="/Quiz" className="px-10 text-lg">
-            quiz
+            Quiz
           </Link>
-          <Link href="/" className="px-10 text-lg">
-            chat
+          <Link href="https://colab.research.google.com/drive/1wXla-izcZTCDFpQlhoe0baSwuwGiadzN#scrollTo=AhvVBVVhLZm4" className="px-10 text-lg">
+            Chat
           </Link>
           <Link href="/AboutUs" className="px-10 text-lg">
-            about us
+            About Us
           </Link>
 
           <div className="flex items-center ml-4 -my-9 bg-transparent">
@@ -35,9 +35,12 @@ const NavBar = () => {
                     <div className="w-17 rounded-full">
                       <div className="avatar placeholder">
                         <div className="bg-violet-600 text-neutral-content rounded-full w-12">
+                
                           <span className="text-lg">
                             {session.user?.name?.substring(0, 1)}
                           </span>
+                  
+                         
                         </div>
                       </div>
                     </div>
@@ -47,9 +50,11 @@ const NavBar = () => {
                   tabIndex={0}
                   className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
                 >
+                              <Link href="/Profile">
                   <li>
                     <a>{session.user?.email}</a>
                   </li>
+                  </Link>
                   <li>
                     <Link href="/api/auth/signout" className="">
                       Logout

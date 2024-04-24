@@ -26,7 +26,7 @@ const MissionStmt = () => {
       </div>
       </div>
 
-      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 mb-8 z-20">
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 mb-32 z-20">
         <div className="bg-black text-white py-6 px-24 rounded-xl drop-shadow-md">
           <h2 className="text-xl font-bold">What We Offer</h2>
         </div>

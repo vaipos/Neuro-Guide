@@ -11,8 +11,8 @@ datasource db {
 }
 
 model UserResponse {
-  userID Int @id @default(autoincrement())
-  username String 
+  userID    Int    @id @default(autoincrement())
+  username  String
   Question1 Int
   Question2 Int
   Question3 Int
@@ -21,34 +21,42 @@ model UserResponse {
   Question6 Int
   Question7 Int
   Question8 Int
-  Diagnosis Int
+  Diagnosis String
+  date DateTime
 }
 
 model Treatments {
-  id Int @id @default(autoincrement())
-  diagnosis String 
-  fact1 String
-  fact2 String
-  fact3 String
-  fact4 String
-  s1 String @db.VarChar(1000)
-  s2 String @db.VarChar(1000)
-  s3 String @db.VarChar(1000)
+  id        Int    @id @default(autoincrement())
+  diagnosis String
+  fact1     String
+  fact2     String
+  fact3     String
+  fact4     String
+  s1        String @db.VarChar(1000)@default(cuid())
+  s2        String @db.VarChar(1000)@default(cuid())
+  s3        String @db.VarChar(1000)@default(cuid())
+  s4        String @db.VarChar(1000)@default(cuid())
+  s5        String @db.VarChar(1000)@default(cuid())
+  s6        String @db.VarChar(1000)@default(cuid())
+  s7        String @db.VarChar(1000)@default(cuid())
+  s8        String @db.VarChar(1000)@default(cuid())
+  s9        String @db.VarChar(1000)@default(cuid())
+  s10        String @db.VarChar(1000)@default(cuid())
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?  @db.Text
-  session_state      String?
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
